@@ -1,3 +1,13 @@
+var each = function(arr, callback) {
+    for(var i = 0; i < arr.length; i++) {
+        callback.call(arr[i], i, arr[i]);
+    }
+}
+
+each([1, 2, 3, 4], function(idx, item) {
+    console.log(idx, item);
+})
+
 /* 
 the iterator should have next and hasNext methods  
 */
