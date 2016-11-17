@@ -29,6 +29,33 @@ var obj2 = new Singleton();
 console.log(obj1 === obj2);
 
 
+
+/*
+use a proxy function to implemet singleton
+*/
+
+var CreateDiv = function() {
+
+}
+
+var CreateDivSingletonProxy = (function(){
+    var instance;
+
+    return function() {
+        if(!instance) {
+            instance = new CreateDiv;
+        }
+
+        return instance;
+    }
+})();
+
+var a = new CreateDivSingletonProxy();
+var b = new CreateDivSingletonProxy();
+
+console.log(a === b);
+
+
 /* 
 the closure will maintain an object that create by user function 
 the function code will be running in singleton mode
