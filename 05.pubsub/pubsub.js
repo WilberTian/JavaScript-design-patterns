@@ -1,8 +1,8 @@
 var pubsub = {};
 
 (function(ps){
-    var topics = {},
-          subUid = -1;
+    var topics = {};
+    var subUid = -1;
           
     // Publish or broadcast events of interest
     // with a specific topic name and arguments

@@ -13,8 +13,8 @@ the iterator should have next and hasNext methods
 */
 function iterator(data){
     var data = data;
-          length = data.length;
-          index = 0;
+    var length = data.length;
+    var index = 0;
     
     return {
         next: function(){
